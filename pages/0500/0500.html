@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>first_language_english</title>
+
+
+<script>
+  function displayLastUpdatedDate() {
+    var currentDate = new Date();
+    var options = { day: 'numeric', month: 'numeric', year: 'numeric' };
+    var formattedDate = currentDate.toLocaleDateString('en-GB', options);
+    // Wrap the formatted date inside <h3> tags
+    var formattedDateWithHeading = "<h3>" + formattedDate + "</h3>";
+    // Insert the last updated date into the specified cells
+    document.getElementById("lastUpdatedCell2023").innerHTML = formattedDateWithHeading;
+    document.getElementById("lastUpdatedCell2022").innerHTML = formattedDateWithHeading;
+    document.getElementById("lastUpdatedCell2021").innerHTML = formattedDateWithHeading;
+  }
+  // Call the function when the page loads
+  window.onload = displayLastUpdatedDate;
+</script>
+
+<link href="../../past_papers.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<h1>first language english</h1>
+<table width="337">
+  <tbody>
+    <tr>
+      <td width="98"><h2>year</h2></td>
+      <td width="227"><h3>last_updated</h3></td>
+    </tr>
+    <tr>
+      <td><p><a href="0500_2023.html" title="0500_23" target="_self">2023</a></p></td>
+      <td id="lastUpdatedCell2023"><h3>&nbsp;</h3></td>
+    </tr>
+    <tr>
+      <td><p>2022</p></td>
+      <td id="lastUpdatedCell2022"><h3>&nbsp;</h3></td>
+    </tr>
+    <tr>
+      <td><p>2021</p></td>
+      <td id="lastUpdatedCell2021"><h3>&nbsp;</h3></td>
+    </tr>
+  </tbody>
+</table>
+</body>
+</html>

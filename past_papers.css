@@ -1,0 +1,66 @@
+body {
+    background-color: #141414; /* background color of page */
+    font-size: 19px;
+}
+
+a {
+    color: inherit; /* Set the color to inherit from its parent */
+    text-decoration: none; /* Remove the underline */
+  }
+
+h1, h2, h3, h4, p{
+    font-family: Consolas, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", Monaco, "Courier New", "monospace";
+}
+
+h1 {
+    margin-top: 70px;
+    font-size: 29px;
+    margin-left: 240px;
+    color: #D2D2D2;
+}
+
+h2 {
+    margin-top: 13px;
+    font-size: 22px;
+	color: #D2D2D2;
+	margin-bottom: 27px;
+}
+
+h3 {
+	margin-top: 13px;
+    font-size: 15px;
+	color: #525252;
+	margin-bottom: 27px;
+}
+
+h4 {
+    margin-top: 13px;
+    font-size: 22px;
+	color: #D2D2D2;
+	margin-bottom: 27px;
+	margin-left: 240px;
+}
+
+
+p {
+    color: #9B9B9B;
+    text-decoration: underline;
+    font-size: 19px;
+	margin-top: 12px;
+}
+
+table {
+    margin-left: 240px;
+    border-collapse: collapse;
+}
+
+table, td, th {
+    line-height: 0.1;
+}
+
+td h3{
+  margin: 0; /* To remove any default margin */
+  display: inline-block; /* Ensure vertical alignment works */
+  vertical-align: middle;
+}
+
