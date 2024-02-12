@@ -1,35 +1,62 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
 <head>
 <meta charset="utf-8">
 <title>IGCSE</title>
+<!-- Internal Styles -->
 <style>
   h2 {
     margin-top: 0px;
   }
-	
- a {
-    color: inherit; /* Set the color to inherit from its parent */
-    text-decoration: none; /* Remove the underline */
+  
+  a {
+    color: inherit;
+    text-decoration: none;
   }
+	
+/*  INPUT STYLE*/
+	input[type="text"] {
+    font-family: Consolas, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", Monaco, "Courier New", monospace;
+    font-size: 26px;
+    color: #D2D2D2;
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid #D2D2D2;
+    width: auto;
+    padding: 0;
+    outline: none;
+  }
+/*____________*/
+	
 </style>
+<!-- External Stylesheet -->
 <link href="../../past_papers.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
-<h1>IGCSE</h1>
+<!-- Navigation -->
+<h4>past_papers : <a href="../../index.html" target="_self">home</a> / <a href="igcse_home.html" target="_self">IGCSE</a></h4>
+
+<!-- Main Content -->
+
+<!-- TEXT EDITOR-->
+<h1 id="toggleHeader"><span>⬤</span> <span id="editableText">igcse</span></h1>
+<!--____________-->
+
 <table width="515">
   <tbody>
+    <!-- Table Header -->
     <tr>
       <td width="99" align="left" valign="middle"><h2>code</h2></td>
       <td width="580" align="left" valign="middle"><h2>syllabus</h2></td>
     </tr>
+    <!-- Table Rows -->
     <tr>
       <td><p>0417</p></td>
       <td><p>ICT</p></td>
     </tr>
     <tr>
-      <td><p>0500</p></td>
+      <td><p><a href="../0500/0500.html" target="_self">0500</a></p></td>
       <td><p><a href="../0500/0500.html" title="first language english" target="_self">first language english</a></p></td>
     </tr>
     <tr>
@@ -41,7 +68,7 @@
       <td><p>chemistry</p></td>
     </tr>
     <tr>
-	  <td><p>0625</p></td>
+      <td><p>0625</p></td>
       <td><p>physics</p></td>
     </tr>
     <tr>
@@ -50,5 +77,35 @@
     </tr>
   </tbody>
 </table>
+
+<!--TEXT SCRIPT-->
+<script>
+editableText.addEventListener("click", function() {
+    const input = document.createElement("input");
+    input.type = "text";
+    input.value = editableText.textContent.trim();
+    input.addEventListener("blur", function() {
+    editableText.textContent = this.value.trim();
+    });
+    editableText.textContent = ""; // Clear text content
+    editableText.appendChild(input);
+    input.focus();
+
+    input.addEventListener("keydown", function(event) {
+        if (event.keyCode === 13) { // 13 is the Enter key code
+            const searchText = this.value.toLowerCase();
+            const links = document.querySelectorAll("table a");
+            for (const link of links) {
+                if (link.textContent.toLowerCase() === searchText) {
+                    window.location.href = link.href;
+                    return;
+                }
+            }
+        }
+    });
+});
+</script>
+<!--___________-->
+
 </body>
 </html>
