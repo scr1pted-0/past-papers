@@ -1,12 +1,14 @@
 body {
     background-color: #141414; /* background color of page */
     font-size: 19px;
+    cursor: url("file:///C:/Users/justi/OneDrive/cursors_win/light/cursor/pointer.cur"), auto;
 }
 
 a {
     color: inherit; /* Set the color to inherit from its parent */
     text-decoration: none; /* Remove the underline */
     transition: color 0.3s ease; /* Add transition for smooth color change */
+    cursor: url("file:///C:/Users/justi/OneDrive/cursors_win/light/cursor/pointer.cur"), pointer;
 }
 
 a:hover {
