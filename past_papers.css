@@ -1,19 +1,19 @@
 body {
     background-color: #141414; /* background color of page */
     font-size: 19px;
-	cursor: url(".cur/pointer.cur")auto;
+	cursor: url("pointer.cur")auto;
 }
 
 a {
     color: inherit; /* Set the color to inherit from its parent */
     text-decoration: none; /* Remove the underline */
     transition: color 0.3s ease; /* Add transition for smooth color change */
-	cursor: url(".cur/link.cur")pointer;
+	cursor: url("link.cur")pointer;
 }
 
 input[type="text"],
 textarea {
-  cursor: url(".cur/beam.cur")text;
+  cursor: url("beam.cur")text;
 }
 
 a:hover {
